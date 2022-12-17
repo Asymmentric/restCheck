@@ -1,7 +1,9 @@
 const express=require('express')
 const app=express()
+const cors=require('cors')
 app.use(express.json())
-// const {image,pool}=require('./package-lock.json')
+app.use(cors())
+
 const { image } = require('./pool')
 
 app.get("/",(req,res)=>{
